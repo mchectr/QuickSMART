@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <title>QuickSmarts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scaled=1.0, width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="cascade.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+
+        <ul class="navbar-nav">
+                <li class="active">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#aboutus" class="nav-link">About Us</a>
+                </li>
+                <li class="white"><legend>......................................................................................................</legend></li>
+                <li class="nav-item">
+                    <form class="login"> 
+                        <fieldset>
+                        <form action="/api.php">
+                        <input type="text" placeholder="Username" id="username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" value="Submit" id="submit1"> Login </button>
+                        </fieldset>               
+                    </form>
+                </li>
+        </ul>
+    </nav>
+
+    
+
+    <div id="form" class="form">
+        <div align="right">
+            <form id="signup">
+                <fieldset>
+                <img src="QuickSmarts resized.png">
+                <form action="/api.php">
+                <input type="text" id= "firstname" placeholder="First Name" class="field">
+                <br>
+                <input type="text" id="surname" placeholder="Last Name" class="field">
+                <br>
+                <input type="email" id="email" placeholder="example@mail.com" class="field">
+                <br>
+                <input type="text" id="username" placeholder="Username" class="field">
+                <br>
+                <input type="password" id="password" placeholder="Password" class="field">
+                <br>
+                <input type="password" placeholder="Retype password" class="field">
+                <br><br>
+                <button type="submit" value="Submit" id="submit2"> Submit </button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div id="home" class="jumbotron text-center">
+        <img src="QuickSmarts cops.png" class="image"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="Math Button.png">
+                    <br><br>
+                    <a href="#math" class="button">Math</a>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Sciencebutton copy.png">
+                    <br><br>
+                    <a href="#science" class="button">Science</a>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Reading button copy.png">
+                    <br><br>
+                    <a href="#english" class="button">English</a>
+                </div>
+            </div>
+    </div>
+    <br><br>
+    <div id="aboutus">
+            <div class="container">
+                <div>
+                        <img src="Logo.png" id="logo">
+                        <p class="black">We are QuickSMART! We are a team of adult engineers who love children and we love to get into their minds.</p>
+                </div>
+    </div>
+
+    <br><br>
+    
+    <div id="math"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Math!
+        <div class="text" >
+            <p>Students can learn about basic arithmetic operations, units and measurements, and more!</p>
+        </div>
+    </div>
+
+    <div id="science"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Math!
+        <div class="text" >
+            <p>Students can learn about basic arithmetic operations, units and measurements, and more!</p>
+        </div>
+    </div>
+
+    <div id="english"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Math!
+        <div class="text" >
+            <p>Students can learn about basic arithmetic operations, units and measurements, and more!</p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        window.onload = () => {
+            document.querySelector("#submit2").onclick = () => {
+                const xhr = new XMLHttpRequest
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        alert(xhr.responseText)
+                    }
+                }
+                xhr.open("POST", "api.php", true)
+                let formData = [
+                    "firstname=" + encodeURIComponent(document.querySelector("#firstname").value),
+                    "surname=" + encodeURIComponent(document.querySelector("#surname").value),
+                    "email=" + encodeURIComponent(document.querySelector("#email").value),
+                    "username=" + encodeURIComponent(document.querySelector("#username").value),
+                    "password=" + encodeURIComponent(document.querySelector("#password").value),
+                ].join('&')
+                xhr.send(formData)
+            }
+        }
+    </script>
+</body>
+</html>

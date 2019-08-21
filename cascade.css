@@ -1,0 +1,182 @@
+.nav-item::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:4px;
+    background: #f3befa;
+    transition: 0.2s;
+    margin-top:-10px;
+}
+
+.nav-item:hover::after{width:100%;}
+
+.nav-link{padding:15px 5px;transition:0.2s;}
+
+.navbar-nav .nav-link {
+    
+    color:#000;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.navbar-nav .active > .nav-link{
+  
+    width:100%;
+    height:51px;
+    
+  border-bottom: .25rem solid transparent;
+  border-bottom-color: #ed4137;
+   
+}
+
+.form {
+    background-image: url("Students copy copy.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ffffff;
+    padding: 0% 12%;
+    width: 100%;
+    height: 740px;
+    align-content: right;
+    text-align: right;
+}
+
+.image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#signup {
+    padding: 10% 0%;
+    width: 380px;
+    height: 500px;
+    align-content: right;
+}
+
+.field {
+    padding: 5% 5%;
+    width: 350px;
+    height: 50px;
+    align-content: right;
+}
+
+.text {
+    align-content: "center"
+}
+
+.white {
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    color: white;
+}
+
+.black {
+    align-content: right;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+.button {
+    background-color: rgb(13, 118, 150);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+#submit1 {
+    background-color: rgb(13, 118, 150);
+    color: white;
+    padding: 3px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content: right;
+}
+
+#submit2 {
+    background-color: rgb(13, 118, 150);
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-items: center;
+}
+
+#signlabel {
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    align-content: right;
+}
+
+#logo {
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    padding: 10px 10px;
+}
+
+#aboutus{
+    background-color: #DDDDDD;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 640px;
+}
+
+#math{
+    background-image: url(math.jpg);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 640px;
+}
+
+#science{
+    background-image: url(sci.jpg);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 640px;
+}
+
+#english{
+    background-image: url(read.jpg);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 640px;
+}
